@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/static/styles.css" />
+  <style>
+    #image {
+        position: absolute;
+        top: 250px; /* Положение сверху */
+        left: 1050px; /* Положение слева */
+    }
+    #image1 {
+        position: absolute;
+        top: 10px; /* Положение сверху */
+        left: 3%; /* Положение слева */
+    }
+    
+  </style>
+  <title>Document</title>
+</head>
+<body class="days-one-regular">
+  <form action="/prediction" method="POST">
+    <input type="text" name="prompt">
+
+    <input type="submit" value="Протестировать" name="promptButton" formaction="/button_clicked"/>
+    
+  </form>
+  
+  <img id="image" src="{{ url_for('static', filename='persik.jpg') }}"  width="450" height="450">
+  <img id="image1" src="{{ url_for('static', filename='Group5.svg') }}" >
+  
+</body>
+</html>
